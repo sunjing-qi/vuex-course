@@ -17,31 +17,14 @@ export default new Vuex.Store({
   },
   getters: {
     // 并没有改变属性的值
-    getCount: state => ++state.count,
-    // count(state){
-    // return ++state.count
-    // }
+    getCount: state => state.count,
     completedTodos: state => state.todos.filter(todo => todo.completed),
-    // completedTodos: function (state) {
-    //   return state.todos.filter(function (todo) {
-    //      return todo.completed;
-    //   })
-    // }
     completedTodosCount: (state, getters) => getters.completedTodos.length,
-    // completedTodosCount: function (state, getters) {
-    //   return getters.completedTodos.length;
-    // }
     getTodosById: state => id => state.todos.find(todo => todo.id == id)
-    // getTodosById: function (state) {
-    //   (function(id) {
-    //     return state.todos.find(function (todo) {
-    //       return todo.id = id;
-    //     })
-    //   })(id)
-    // }
   },
   mutations: {
-
+    incrementCount: state => state.count++,
+    decrementCount: (state, number) => state.count -= number.amount
   },
   actions: {
 
