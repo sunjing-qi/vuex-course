@@ -1,19 +1,11 @@
 <template>
   <div id="app">
-    <!-- mutations -->
-    <!-- <button @click="decrement({amount:2})">-</button>
-    <span>{{getCount}}</span>
-    <button @click="increment">+</button>-->
-    <!-- <button @click="decrementCount({amount:2})">-</button>
-    <span>{{getCount}}</span>
-    <button @click="incrementCount">+</button>-->
     <button @click="decrementCountAsync({amount:2})">-</button>
     <span>{{getCount}}</span>
     <button @click="incrementCountAsync">+</button>
     <hr />
     <p>{{completedTodos}}</p>
     <button @click="fetchDataAsync">fetchData</button>
-    <!-- <button @click="fetchData">fetchData</button> -->
   </div>
 </template>
 
