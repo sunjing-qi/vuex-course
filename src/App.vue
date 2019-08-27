@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="container">
+      <showTodos />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import showTodos from "./components/ShowTodos";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    showTodos
   }
-}
+};
 </script>
 
 <style>
+* {
+  padding: 0;
+  margin: 0;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: rgb(232, 247, 240);
+}
+#container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 </style>
